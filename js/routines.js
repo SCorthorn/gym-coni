@@ -908,17 +908,20 @@ const DEFAULT_ROUTINES = [
 async function seedIfEmpty() {
   console.log('[Routines] Checking seed — path: coni/data/routines');
   const snap = await getDocs(ROUTINES_COL);
-  console.log('[Routines] Collection size:', snap.size);
+  console.log('[Routines] Empty-collection check → size:', snap.size, '| empty:', snap.empty);
   if (!snap.empty) {
-    console.log('[Routines] Already has data, skipping seed');
+    console.log(
+      '[Routines] Already has data, skipping seed — existing routines:',
+      snap.docs.map(d => d.data().name).join(', ')
+    );
     return;
   }
-  console.log('[Routines] Collection empty — seeding default routines...');
+  console.log('[Routines] Collection empty — seeding', DEFAULT_ROUTINES.length, 'default routines...');
   const now = Timestamp.now();
-  await Promise.all(DEFAULT_ROUTINES.map(r =>
+  const refs = await Promise.all(DEFAULT_ROUTINES.map(r =>
     addDoc(ROUTINES_COL, { ...r, createdAt: now, updatedAt: now })
   ));
-  console.log('[Routines] Seed complete');
+  console.log('[Routines] Seed complete — wrote', refs.length, 'docs:', refs.map(r => r.id).join(', '));
 }
 
 async function getExerciseLibrary() {
