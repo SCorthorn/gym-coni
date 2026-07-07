@@ -6,12 +6,12 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBSWgrVhsgBCpjYmWZOZNFcQSPBmwQfl9g",
+  apiKey: "AIzaSyDAllVDfv90tKwfUrtDMot9XZUY8Ee1MeQ",
   authDomain: "coni-gym-tracker.firebaseapp.com",
   projectId: "coni-gym-tracker",
   storageBucket: "coni-gym-tracker.firebasestorage.app",
-  messagingSenderId: "262548489404",
-  appId: "1:262548489404:web:4b4445e63113d0d73e7cb9"
+  messagingSenderId: "165711638021",
+  appId: "1:165711638021:web:2bf459a3df1413c8a7b66c"
 };
 
 const app = initializeApp(firebaseConfig);

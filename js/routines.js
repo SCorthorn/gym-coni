@@ -17,23 +17,890 @@ let pickerSearch = '';
 
 const DEFAULT_ROUTINES = [
   {
-    name: "A",
-    exercises: [
-      { exerciseId: "squat",               exerciseName: "Squat",               sets: [{ reps: 8, weight: 50 }, { reps: 8, weight: 50 }, { reps: 8, weight: 50 }] },
-      { exerciseId: "seated_row",          exerciseName: "Seated Row",          sets: [{ reps: 8, weight: 60 }, { reps: 8, weight: 60 }, { reps: 8, weight: 60 }] },
-      { exerciseId: "lateral_raise",       exerciseName: "Lateral Raise",       sets: [{ reps: 8, weight: 8 }, { reps: 8, weight: 8 }, { reps: 8, weight: 8 }, { reps: 8, weight: 8 }] },
-      { exerciseId: "standing_calf_raise", exerciseName: "Standing Calf Raise", sets: [{ reps: 10, weight: 50 }, { reps: 10, weight: 50 }, { reps: 10, weight: 50 }] },
-      { exerciseId: "hip_abductor",        exerciseName: "Hip Abductor",        sets: [{ reps: 8, weight: 85 }, { reps: 8, weight: 85 }, { reps: 8, weight: 85 }] }
+    "name": "A",
+    "exercises": [
+      {
+        "exerciseId": "plank_pull_through",
+        "exerciseName": "Plank pull through",
+        "sets": [
+          {
+            "reps": 60,
+            "weight": 6
+          },
+          {
+            "reps": 60,
+            "weight": 6
+          },
+          {
+            "reps": 60,
+            "weight": 6
+          },
+          {
+            "reps": 60,
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "exerciseId": "over_head_sit_ups",
+        "exerciseName": "Over head sit ups",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 6
+          },
+          {
+            "reps": 20,
+            "weight": 6
+          },
+          {
+            "reps": 20,
+            "weight": 6
+          },
+          {
+            "reps": 20,
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "exerciseId": "side_plank",
+        "exerciseName": "Side plank",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "90__leg_drop",
+        "exerciseName": "90° Leg drop",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "plank",
+        "exerciseName": "Plank",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "gemelos",
+        "exerciseName": "Gemelos",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 0
+          },
+          {
+            "reps": 15,
+            "weight": 0
+          },
+          {
+            "reps": 15,
+            "weight": 0
+          },
+          {
+            "reps": 15,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "sentadilla_isometrica_pared",
+        "exerciseName": "Sentadilla isometrica pared",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "exerciseId": "step_down_exc_ntrico",
+        "exerciseName": "Step down excéntrico",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 8
+          },
+          {
+            "reps": 12,
+            "weight": 8
+          },
+          {
+            "reps": 12,
+            "weight": 8
+          },
+          {
+            "reps": 12,
+            "weight": 8
+          }
+        ]
+      },
+      {
+        "exerciseId": "sentadilla_a_75_",
+        "exerciseName": "Sentadilla a 75*",
+        "sets": [
+          {
+            "reps": 35,
+            "weight": 10
+          },
+          {
+            "reps": 35,
+            "weight": 10
+          },
+          {
+            "reps": 35,
+            "weight": 10
+          },
+          {
+            "reps": 35,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "exerciseId": "terminal_knee_extension",
+        "exerciseName": "Terminal Knee Extension",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "lat_pulldown",
+        "exerciseName": "Lat pulldown",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 32.5
+          },
+          {
+            "reps": 10,
+            "weight": 32.5
+          },
+          {
+            "reps": 10,
+            "weight": 32.5
+          },
+          {
+            "reps": 10,
+            "weight": 32.5
+          }
+        ]
+      },
+      {
+        "exerciseId": "lower_back",
+        "exerciseName": "Lower back",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          }
+        ]
+      },
+      {
+        "exerciseId": "hammer_curl",
+        "exerciseName": "Hammer curl",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "exerciseId": "remo",
+        "exerciseName": "Remo",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 27.5
+          },
+          {
+            "reps": 10,
+            "weight": 27.5
+          },
+          {
+            "reps": 10,
+            "weight": 27.5
+          },
+          {
+            "reps": 10,
+            "weight": 27.5
+          }
+        ]
+      },
+      {
+        "exerciseId": "upper_back",
+        "exerciseName": "Upper back",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 22.5
+          }
+        ]
+      }
     ]
   },
   {
-    name: "B",
-    exercises: [
-      { exerciseId: "leg_extension",        exerciseName: "Leg Extension",        sets: [{ reps: 10, weight: 32.5 }, { reps: 10, weight: 32.5 }, { reps: 10, weight: 32.5 }] },
-      { exerciseId: "seated_overhead_press",exerciseName: "Seated Overhead Press",sets: [{ reps: 7, weight: 20 }, { reps: 7, weight: 20 }, { reps: 7, weight: 20 }, { reps: 7, weight: 20 }] },
-      { exerciseId: "deadlift",             exerciseName: "Deadlift",             sets: [{ reps: 5, weight: 80 }, { reps: 5, weight: 80 }] },
-      { exerciseId: "lat_pulldown",         exerciseName: "Lat Pulldown",         sets: [{ reps: 9, weight: 50 }, { reps: 9, weight: 50 }, { reps: 9, weight: 50 }] },
-      { exerciseId: "triceps_pushdown",     exerciseName: "Triceps Pushdown",     sets: [{ reps: 8, weight: 20 }, { reps: 8, weight: 20 }, { reps: 8, weight: 20 }] }
+    "name": "B",
+    "exercises": [
+      {
+        "exerciseId": "cortos",
+        "exerciseName": "Cortos",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg_raises",
+        "exerciseName": "Leg raises",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "russian_twist",
+        "exerciseName": "Russian twist",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 8
+          },
+          {
+            "reps": 30,
+            "weight": 8
+          },
+          {
+            "reps": 30,
+            "weight": 8
+          }
+        ]
+      },
+      {
+        "exerciseId": "side_to_side_crunches",
+        "exerciseName": "Side to side crunches",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "comando_plank",
+        "exerciseName": "Comando plank",
+        "sets": [
+          {
+            "reps": 45,
+            "weight": 0
+          },
+          {
+            "reps": 45,
+            "weight": 0
+          },
+          {
+            "reps": 45,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "abducci_n_de_cadera_el_stico__de_pie_",
+        "exerciseName": "Abducción de cadera elástico (de pie)",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 0
+          },
+          {
+            "reps": 12,
+            "weight": 0
+          },
+          {
+            "reps": 12,
+            "weight": 0
+          },
+          {
+            "reps": 12,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "peso_muerto",
+        "exerciseName": "Peso muerto",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "exerciseId": "puente_gluteos_1_pierna",
+        "exerciseName": "Puente gluteos 1 pierna",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 0
+          },
+          {
+            "reps": 15,
+            "weight": 0
+          },
+          {
+            "reps": 15,
+            "weight": 0
+          },
+          {
+            "reps": 15,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "single_leg_deadlift_con_kettlebell",
+        "exerciseName": "Single leg deadlift con kettlebell",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 16
+          },
+          {
+            "reps": 10,
+            "weight": 16
+          },
+          {
+            "reps": 10,
+            "weight": 16
+          },
+          {
+            "reps": 10,
+            "weight": 16
+          }
+        ]
+      },
+      {
+        "exerciseId": "lower_back",
+        "exerciseName": "Lower back",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          }
+        ]
+      },
+      {
+        "exerciseId": "press_pecho",
+        "exerciseName": "Press pecho",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 6
+          },
+          {
+            "reps": 12,
+            "weight": 6
+          },
+          {
+            "reps": 12,
+            "weight": 6
+          },
+          {
+            "reps": 12,
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "exerciseId": "tricep_extension",
+        "exerciseName": "Tricep extension",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "exerciseId": "tricep_overhead_extension",
+        "exerciseName": "Tricep overhead extension",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "exerciseId": "aperturas_con_mancuernas",
+        "exerciseName": "Aperturas con mancuernas",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C",
+    "exercises": [
+      {
+        "exerciseId": "dead_bug",
+        "exerciseName": "Dead bug",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 2
+          },
+          {
+            "reps": 30,
+            "weight": 2
+          },
+          {
+            "reps": 30,
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "exerciseId": "scissors",
+        "exerciseName": "Scissors",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "russian_twist",
+        "exerciseName": "Russian twist",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 8
+          },
+          {
+            "reps": 30,
+            "weight": 8
+          },
+          {
+            "reps": 30,
+            "weight": 8
+          }
+        ]
+      },
+      {
+        "exerciseId": "crunches",
+        "exerciseName": "Crunches",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          },
+          {
+            "reps": 20,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "foot_2_foot",
+        "exerciseName": "Foot 2 foot",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "side_plank",
+        "exerciseName": "Side plank",
+        "sets": [
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          },
+          {
+            "reps": 30,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "sentadillas",
+        "exerciseName": "Sentadillas",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "exerciseId": "clam_shell",
+        "exerciseName": "Clam shell",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 0
+          },
+          {
+            "reps": 10,
+            "weight": 0
+          },
+          {
+            "reps": 10,
+            "weight": 0
+          },
+          {
+            "reps": 10,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "exerciseId": "estocada_isometrica",
+        "exerciseName": "Estocada isometrica",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 10
+          },
+          {
+            "reps": 20,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "exerciseId": "kettlebell_knee_raise",
+        "exerciseName": "kettlebell knee raise",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 8
+          },
+          {
+            "reps": 8,
+            "weight": 8
+          },
+          {
+            "reps": 8,
+            "weight": 8
+          },
+          {
+            "reps": 8,
+            "weight": 8
+          }
+        ]
+      },
+      {
+        "exerciseId": "hammer_curl___press_hombros",
+        "exerciseName": "Hammer curl + press hombros",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "exerciseId": "lower_back",
+        "exerciseName": "Lower back",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 12,
+            "weight": 27.5
+          }
+        ]
+      },
+      {
+        "exerciseId": "lateral_raises",
+        "exerciseName": "Lateral raises",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          }
+        ]
+      }
     ]
   }
 ];
