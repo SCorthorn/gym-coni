@@ -7,9 +7,9 @@ import {
 
 const firebaseConfig = {
   apiKey: "AIzaSyBSWgrVhsgBCpjYmWZOZNFcQSPBmwQfl9g",
-  authDomain: "seba-gym-tracker.firebaseapp.com",
-  projectId: "seba-gym-tracker",
-  storageBucket: "seba-gym-tracker.firebasestorage.app",
+  authDomain: "coni-gym-tracker.firebaseapp.com",
+  projectId: "coni-gym-tracker",
+  storageBucket: "coni-gym-tracker.firebasestorage.app",
   messagingSenderId: "262548489404",
   appId: "1:262548489404:web:4b4445e63113d0d73e7cb9"
 };
