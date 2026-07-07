@@ -4,7 +4,7 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 import { store } from './store.js';
 
-const EXERCISES_COL = collection(db, 'seba', 'data', 'exercises');
+const EXERCISES_COL = collection(db, 'coni', 'data', 'exercises');
 
 const SEED = [
   { name: 'Crunches',                  muscleGroup: 'Abs',                        zone: 'Core',  equipment: 'Bodyweight', isCustom: false },
@@ -57,7 +57,7 @@ async function saveNew(data) {
 }
 
 async function remove(id) {
-  await deleteDoc(doc(db, 'seba', 'data', 'exercises', id));
+  await deleteDoc(doc(db, 'coni', 'data', 'exercises', id));
 }
 
 // ── Filtering ─────────────────────────────────────────────
