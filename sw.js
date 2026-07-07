@@ -1,4 +1,4 @@
-const CACHE = 'seba-gym-v5';
+const CACHE = 'coni-gym-v5';
 
 self.addEventListener('install', e => {
   e.waitUntil(self.skipWaiting());
