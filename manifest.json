@@ -1,6 +1,6 @@
 {
-  "name": "Seba Gym Tracker",
-  "short_name": "Seba Gym",
+  "name": "Coni Gym Tracker",
+  "short_name": "Coni Gym",
   "description": "Personal gym workout tracker",
   "start_url": "/gym-logger/",
 "scope": "/gym-logger/",
