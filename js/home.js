@@ -3,8 +3,8 @@ import {
   collection, getDocs, addDoc, deleteDoc, doc, query, orderBy, limit, Timestamp
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-const ROUTINES_COL = collection(db, 'seba', 'data', 'routines');
-const SESSIONS_COL = collection(db, 'seba', 'data', 'sessions');
+const ROUTINES_COL = collection(db, 'coni', 'data', 'routines');
+const SESSIONS_COL = collection(db, 'coni', 'data', 'sessions');
 
 // ── State ─────────────────────────────────────────────────
 let routines  = [];
@@ -16,7 +16,7 @@ let saveTimer = null;
 
 // ── localStorage draft ────────────────────────────────────
 
-const DRAFT_KEY = 'seba_gym_active_session';
+const DRAFT_KEY = 'coni_gym_active_session';
 
 function saveToLocal() {
   if (!active) return;
@@ -204,7 +204,7 @@ function renderSessions() {
       if (!confirm('Delete this session?')) return;
       const id = btn.dataset.id;
       console.log('[Session] Deleting session id:', id);
-      await deleteDoc(doc(db, 'seba', 'data', 'sessions', id));
+      await deleteDoc(doc(db, 'coni', 'data', 'sessions', id));
       console.log('[Session] Deleted from Firestore');
       sessions = sessions.filter(s => s.id !== id);
       renderHome();
