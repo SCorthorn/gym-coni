@@ -4,8 +4,8 @@ import {
   collection, getDocs, addDoc, setDoc, deleteDoc, doc, Timestamp, onSnapshot
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-const ROUTINES_COL = collection(db, 'seba', 'data', 'routines');
-const EXERCISES_COL = collection(db, 'seba', 'data', 'exercises');
+const ROUTINES_COL = collection(db, 'coni', 'data', 'routines');
+const EXERCISES_COL = collection(db, 'coni', 'data', 'exercises');
 
 // ── State ─────────────────────────────────────────────────
 let routines = [];
@@ -39,7 +39,7 @@ const DEFAULT_ROUTINES = [
 ];
 
 async function seedIfEmpty() {
-  console.log('[Routines] Checking seed — path: seba/data/routines');
+  console.log('[Routines] Checking seed — path: coni/data/routines');
   const snap = await getDocs(ROUTINES_COL);
   console.log('[Routines] Collection size:', snap.size);
   if (!snap.empty) {
@@ -69,7 +69,7 @@ async function persistRoutine(routine) {
     createdAt: routine.createdAt || Timestamp.now(),
   };
   if (routine.id) {
-    await setDoc(doc(db, 'seba', 'data', 'routines', routine.id), data);
+    await setDoc(doc(db, 'coni', 'data', 'routines', routine.id), data);
     return { ...routine, ...data };
   }
   const ref = await addDoc(ROUTINES_COL, data);
@@ -77,7 +77,7 @@ async function persistRoutine(routine) {
 }
 
 async function removeRoutine(id) {
-  await deleteDoc(doc(db, 'seba', 'data', 'routines', id));
+  await deleteDoc(doc(db, 'coni', 'data', 'routines', id));
 }
 
 // ── List view ─────────────────────────────────────────────
@@ -495,7 +495,7 @@ export async function initRoutines() {
   onSnapshot(
     ROUTINES_COL,
     snap => {
-      console.log('[Routines] onSnapshot —', snap.size, 'docs from seba/data/routines');
+      console.log('[Routines] onSnapshot —', snap.size, 'docs from coni/data/routines');
       routines = snap.docs.map(d => ({ id: d.id, ...d.data() }));
       renderList();
     },
