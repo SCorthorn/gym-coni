@@ -3,7 +3,7 @@ import {
   collection, getDocs, addDoc, onSnapshot, query, orderBy, limit, Timestamp
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-const SESSIONS_COL = collection(db, 'seba', 'data', 'sessions');
+const SESSIONS_COL = collection(db, 'coni', 'data', 'sessions');
 
 const HISTORICAL_SESSIONS = [
   {
